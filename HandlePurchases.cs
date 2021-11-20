@@ -138,7 +138,8 @@ namespace piqee
                     _log.LogWarning($"Possible duplicate {item.ProductName}");
                     continue;
                 }
-                if (DateTime.Parse(item.PurchaseDate).DayOfYear <= purchase.OrderDate.Value.DayOfYear)
+                if (DateTime.Parse(item.PurchaseDate).AddHours(-DateTime.Parse(item.PurchaseDate).Hour - 1).Ticks
+ <= purchase.OrderDate.Value.Ticks)
                 {
                     if (item.Damaged)
                     {

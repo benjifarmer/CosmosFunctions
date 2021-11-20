@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AzureFunctionsVersion>v3</AzureFunctionsVersion>
+       <RootNamespace>CosmosFunctions</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="microsoft.azure.cosmos" Version="3.12.0" />
